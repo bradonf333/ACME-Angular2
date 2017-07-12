@@ -2,7 +2,15 @@
 import { Component } from "@angular/core";
 
 // Decorator
-@Component({})
+@Component({
+    selector: 'pm-app',
+    template: `
+    <div>
+        <h1>{{pageTitle}}</h1>
+        <div>My First Component</div>
+    </div>
+    `
+})
 
 // Export class AppComponent
 export class AppComponent {
