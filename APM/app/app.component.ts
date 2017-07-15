@@ -1,5 +1,5 @@
 // Import the Component Decorator
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 // Decorator
 @Component({
