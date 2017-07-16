@@ -36,6 +36,9 @@ var ProductListComponent = (function () {
             }
         ];
     }
+    ProductListComponent.prototype.toggleImage = function () {
+        this.showImage = !this.showImage;
+    };
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
