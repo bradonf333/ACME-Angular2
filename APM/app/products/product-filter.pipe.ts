@@ -1,6 +1,7 @@
 import { PipeTransform, Pipe } from '@angular/core';
 import { IProduct } from './product';
 
+/** Custom Pipe used to filter an array of Products */
 @Pipe({
     name: 'productFilter'
 })
