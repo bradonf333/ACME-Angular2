@@ -12,7 +12,9 @@ var ProductFilterPipe = (function () {
     function ProductFilterPipe() {
     }
     ProductFilterPipe.prototype.transform = function (value, filterBy) {
+        // Checks if the param passed in is defined or sets to null
         filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
+        // Filters the products by the variable passed in
         return filterBy ? value.filter(function (product) {
             return product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1;
         }) : value;
