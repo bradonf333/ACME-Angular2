@@ -1,3 +1,4 @@
+/** Interface used for a Product  */
 export interface IProduct {
     productId: number;
     productName: string;
