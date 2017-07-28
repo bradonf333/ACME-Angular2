@@ -1,3 +1,5 @@
+/** Root module for the application */
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ProductListComponent } from './products/product-list.component';
