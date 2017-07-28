@@ -1,5 +1,6 @@
-// Import the Component Decorator
+// Import the Component and Product Service
 import { Component } from '@angular/core';
+import { ProductService } from './products/product.service';
 
 // Decorator
 @Component({
@@ -9,7 +10,8 @@ import { Component } from '@angular/core';
         <h1>{{pageTitle}}</h1>
         <pm-products></pm-products>
     </div>
-    `
+    `,
+    providers: [ProductService]
 })
 
 // Export class AppComponent
