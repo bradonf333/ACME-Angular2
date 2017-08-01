@@ -18,6 +18,9 @@ import { ProductService } from './products/product.service';
                 </ul>
             </div>
         </nav>
+        <div class ='container'>
+            <router-outlet></router-outlet>
+        </div>
     </div>
     `,
     providers: [ProductService]
