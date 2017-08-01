@@ -16,7 +16,6 @@ var ProductDetailComponent = (function () {
 }());
 ProductDetailComponent = __decorate([
     core_1.Component({
-        selector: 'pm-product-detail',
         moduleId: module.id,
         templateUrl: 'product-detail.component.html'
         // , styleUrls: ['product-detail.component.css']
