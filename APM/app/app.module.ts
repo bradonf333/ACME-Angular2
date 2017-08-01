@@ -13,7 +13,11 @@ import { ProductDetailComponent } from './products/product-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpModule],
+  imports: [
+    BrowserModule
+    , FormsModule
+    , HttpModule
+  ],
   declarations: [
     AppComponent, ProductListComponent
     , ProductFilterPipe, StarComponent
