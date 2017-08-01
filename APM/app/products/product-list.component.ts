@@ -16,6 +16,7 @@ export class ProductListComponent implements OnInit {
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string;
+    errorMessage: string;
     products: IProduct[];
 
     constructor(private _productService: ProductService) {
@@ -29,7 +30,8 @@ export class ProductListComponent implements OnInit {
 
         /** Calls the service to return a list of products */
         this._productService.getProducts()
-            .subscribe(products => this.products = products);
+            .subscribe(products => this.products = products,
+            error => this.errorMessage = <any>error);
 
     }
 
