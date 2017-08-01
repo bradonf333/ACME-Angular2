@@ -15,6 +15,7 @@ var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var product_filter_pipe_1 = require("./products/product-filter.pipe");
 var star_component_1 = require("./shared/star.component");
+var product_detail_component_1 = require("./products/product-detail.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,7 +24,11 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
-        declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent],
+        declarations: [
+            app_component_1.AppComponent, product_list_component_1.ProductListComponent,
+            product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent,
+            product_detail_component_1.ProductDetailComponent
+        ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
