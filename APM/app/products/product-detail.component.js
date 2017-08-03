@@ -18,6 +18,11 @@ var ProductDetailComponent = (function () {
         this._route = _route;
         this.pageTitle = 'Product Details';
     }
+    // Get the parameter passed in to the URL and display it as the page title
+    ProductDetailComponent.prototype.ngOnInit = function () {
+        var id = +this._route.snapshot.params['id'];
+        this.pageTitle += ": " + id;
+    };
     return ProductDetailComponent;
 }());
 ProductDetailComponent = __decorate([
