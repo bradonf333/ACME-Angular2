@@ -12,17 +12,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var product_service_1 = require("./product.service");
 var ProductDetailComponent = (function () {
-    /** Inject ActivatedRoute and Router */
-    function ProductDetailComponent(_route, _router) {
+    /** Inject ActivatedRoute, Router and ProductService */
+    function ProductDetailComponent(_route, _router, _productService) {
         this._route = _route;
         this._router = _router;
+        this._productService = _productService;
         this.pageTitle = 'Product Details';
     }
-    /** Get the parameter passed in to the URL and display it as the page title */
+    /**
+     * 1. Get the parameter passed in to the URL and display it as the page title.
+     * 2. Search list of products by the productId
+     */
     ProductDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
         var id = +this._route.snapshot.params['id'];
         this.pageTitle += ": " + id;
+        this._productService.getProduct(id)
+            .subscribe(function (product) { return _this.product = product; }, function (error) { return _this.errorMessage = error; });
     };
     ProductDetailComponent.prototype.onBack = function () {
         this._router.navigate(['/products']);
@@ -35,7 +43,9 @@ ProductDetailComponent = __decorate([
         templateUrl: 'product-detail.component.html'
         // , styleUrls: ['product-detail.component.css']
     }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router])
+    __metadata("design:paramtypes", [router_1.ActivatedRoute,
+        router_1.Router,
+        product_service_1.ProductService])
 ], ProductDetailComponent);
 exports.ProductDetailComponent = ProductDetailComponent;
 //# sourceMappingURL=product-detail.component.js.map
