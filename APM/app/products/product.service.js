@@ -35,6 +35,17 @@ var ProductService = (function () {
             .catch(this.handleError);
     };
     /**
+     * Returns a single product by searching the list of products.
+     * Checks the productId property against the given number to find a match.
+     * @param id
+     */
+    ProductService.prototype.getProduct = function (id) {
+        return this.getProducts()
+            .map(function (products) { return products.find(function (p) { return p.productId === id; }); })
+            .do(function (data) { return console.log('Single Product: ' + JSON.stringify(data)); })
+            .catch(this.handleError);
+    };
+    /**
      * Takes an error, logs it to the console and throws it to the calling code.
      * @param error
      */

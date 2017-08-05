@@ -30,6 +30,18 @@ export class ProductService {
     }
 
     /**
+     * Returns a single product by searching the list of products.
+     * Checks the productId property against the given number to find a match.
+     * @param id 
+     */
+    getProduct(id: number): Observable<IProduct> {
+        return this.getProducts()
+        .map((products: IProduct[]) => products.find(p => p.productId === id))
+        .do(data => console.log('Single Product: ' + JSON.stringify(data)))
+        .catch(this.handleError);
+    }
+
+    /**
      * Takes an error, logs it to the console and throws it to the calling code.
      * @param error 
      */
