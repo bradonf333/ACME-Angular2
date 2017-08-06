@@ -1,3 +1,5 @@
+/** Displays information for all products */
+
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
 import { ProductService } from './product.service';
