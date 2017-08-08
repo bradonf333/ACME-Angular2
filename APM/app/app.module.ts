@@ -30,9 +30,7 @@ import { WelcomeComponent } from './home/welcome.component';
     ])
   ]
   , declarations: [
-    AppComponent, ProductListComponent
-    , ProductFilterPipe, StarComponent
-    , ProductDetailComponent, WelcomeComponent
+    AppComponent, WelcomeComponent
   ]
   , providers: [ ProductDetailGuard ]
   , bootstrap: [AppComponent]
