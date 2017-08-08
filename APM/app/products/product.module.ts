@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ProductDetailGuard } from './product-guard.service';
+import { ProductService } from './product.service';
 
 @NgModule({
     declarations: [
@@ -30,6 +31,6 @@ import { ProductDetailGuard } from './product-guard.service';
         ])
     ],
     exports: [],
-    providers: [],
+    providers: [ ProductService, ProductDetailGuard]
 })
 export class ProductModule { }

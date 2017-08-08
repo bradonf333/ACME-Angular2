@@ -23,7 +23,6 @@ import { WelcomeComponent } from './home/welcome.component';
   , declarations: [
     AppComponent, WelcomeComponent
   ]
-  , providers: [ ProductDetailGuard ]
   , bootstrap: [AppComponent]
 })
 export class AppModule { }
