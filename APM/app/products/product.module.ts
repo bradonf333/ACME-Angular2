@@ -7,6 +7,7 @@ import { StarComponent } from '../shared/star.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { ProductDetailGuard } from './product-guard.service';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,14 @@ import { RouterModule } from '@angular/router';
         CommonModule
         , FormsModule
         , HttpModule
-        , RouterModule
+        , RouterModule.forChild([
+            { path: 'products', component: ProductListComponent },
+            {
+                path: 'product/:id',
+                canActivate: [ProductDetailGuard]
+                , component: ProductDetailComponent
+            }
+        ])
     ],
     exports: [],
     providers: [],
