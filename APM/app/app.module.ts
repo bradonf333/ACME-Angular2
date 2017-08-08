@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-
 import { WelcomeComponent } from './home/welcome.component';
 
 @NgModule({

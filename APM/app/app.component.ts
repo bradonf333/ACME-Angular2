@@ -2,7 +2,6 @@
 
 // Import the Component and Product Service
 import { Component } from '@angular/core';
-import { ProductService } from './products/product.service';
 
 // Decorator
 @Component({
@@ -22,8 +21,7 @@ import { ProductService } from './products/product.service';
             <router-outlet></router-outlet>
         </div>
     </div>
-    `,
-    providers: [ProductService]
+    `
 })
 
 // Export class AppComponent
