@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ProductDetailGuard } from './products/product-guard.service';
 
 import { WelcomeComponent } from './home/welcome.component';
 
