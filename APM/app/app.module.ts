@@ -18,7 +18,6 @@ import { WelcomeComponent } from './home/welcome.component';
 @NgModule({
   imports: [
     BrowserModule
-    , FormsModule
     , HttpModule
     , RouterModule.forRoot([
       { path: 'products', component: ProductListComponent },
