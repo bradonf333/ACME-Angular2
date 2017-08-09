@@ -9,17 +9,16 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ProductDetailGuard } from './product-guard.service';
 import { ProductService } from './product.service';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     declarations: [
         ProductListComponent,
         ProductDetailComponent,
-        ProductFilterPipe,
-        StarComponent
+        ProductFilterPipe
     ],
     imports: [
-        CommonModule
-        , FormsModule
+        SharedModule
         , HttpModule
         , RouterModule.forChild([
             { path: 'products', component: ProductListComponent },
